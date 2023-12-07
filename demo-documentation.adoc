@@ -35,11 +35,53 @@ Hinweise zur Einrichtung siehe zugehörige Aufgabenstellung.
 
 Ein Beispiel für ein direkt im Dokument eingebettetes PlantUML-Diagramm.
 
-// diagram placeholder
+.Klassendiagramm mit PlantUML 
+[plantuml, "{diagramsdir}/syntax-example1", svg]  
+....
+class Graphic 
+interface Shape <<Interface>> {
+  draw()
+}
+class Circle
+class Triangle
+class Square
+
+Graphic -> Shape
+Shape <|.. Circle
+Shape <|.. Triangle
+Shape <|.. Square
+....
 
 === Inkludiert
 
 Ein Beispiel für ein im Dokument inkludiertes PlantUML-Diagramm als externe Datei.
 
-// diagram placeholder
+.Klassendiagramm mit PlantUML
+[plantuml, "{diagramsdir}/syntax-example2", svg]
+....
+include::{plantumlsdir}/syntax-example2.puml[]
+....
 
+.Usecasediagram mit PlantUML
+[plantuml, "{diagramsdir}/example-usecase-diagram", svg]
+....
+include::{plantumlsdir}/example-usecase-diagram.puml[]
+....
+
+.Klassendiagram mit PlantUML
+[plantuml, "{diagramsdir}/example-class-diagram", svg]
+....
+include::{plantumlsdir}/example-class-diagram.puml[]
+....
+
+.Aktivitätendiagram mit PlantUML
+[plantuml, "{diagramsdir}/example-activity-diagram", svg]
+....
+include::{plantumlsdir}/example-activity-diagram.puml[]
+....
+
+.C4-Modelldiagram mit PlantUML
+[plantuml, "{diagramsdir}/example-c4-modell-diagram", svg]
+....
+include::{plantumlsdir}/example-c4-modell-diagram.puml[]
+....
